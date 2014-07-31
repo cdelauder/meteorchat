@@ -1,0 +1,30 @@
+<head>
+  <title>Meteorchat</title>
+</head>
+<body>
+  <h1>Meteorchat</h1>
+
+  {{>welcome}}
+
+  {{>input}}
+
+  {{>messages}}
+
+</body>
+
+<template name="welcome">
+  <p>
+    Log In
+  </p>
+</template>
+
+<template name="messages">
+  <p>messages:</p>
+  {{#each messages}}
+    {{name}}: {{message}} <br>
+  {{/each}}
+</template>
+
+<template name="input">
+  <p>new message:<input type="text" id="message"></p>
+</template>
