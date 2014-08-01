@@ -6,3 +6,15 @@ html {
 .login-buttons-dropdown-align-right {
     float: right;
 }
+
+.chat {
+  float: left;
+  width: 40%;
+  display: inline;
+}
+
+.post {
+  display: inline;
+  float: right;
+  width: 40%;
+}

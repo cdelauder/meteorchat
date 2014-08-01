@@ -7,10 +7,15 @@
 
   {{>welcome}}
 
-  {{>input}}
-
-  {{>messages}}
-
+  <div class="post">
+    {{>newPost}}
+    {{>errors}}
+    {{>posts}}
+  </div>
+  <div class="chat">
+    {{>input}}
+    {{>messages}}
+  </div>
 </body>
 
 <template name="welcome">
@@ -28,4 +33,21 @@
 
 <template name="input">
   <p>new message:<input type="text" id="message"></p>
+</template>
+
+<template name="newPost">
+  <p>post title:<input type="text" id="title"></p>
+  <p>post body:<input type="text" id="body"></p>
+</template>
+
+<template name="posts">
+  {{#each posts}}
+    {{title}}: <br>
+    {{body}}<br>
+    <br>
+  {{/each}}
+</template>
+
+<template name="errors">
+  <p>{{errors}}</p>
 </template>
