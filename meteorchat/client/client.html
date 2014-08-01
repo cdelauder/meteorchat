@@ -6,19 +6,23 @@
 
   {{>links}}
 
-  <a href="/posts">posts?</a>
+</template>
 
+<template name="chat">
+  <div class="chat">
+    {{>input}}
+    {{>messages}}
+  </div>
+</template>
+
+<template name="post">
   <div class="post">
     {{#if true}}
       {{>newPost}}
       {{>errors}}
       {{>posts}}
     {{/if}}
-  </div>
-  <div class="chat">
-    {{>input}}
-    {{>messages}}
-  </div>
+  </div> 
 </template>
 
 <template name="welcome">
@@ -32,6 +36,7 @@
 </template>
 
 <template name="messages">
+  <a href="/">home</a>
   <p>messages:</p>
   {{#each messages}}
     {{name}}: {{message}} <br>
@@ -48,12 +53,12 @@
 </template>
 
 <template name="posts">
+  <a href="/">home</a>
   {{#each posts}}
     {{title}}: <br>
     {{body}}<br>
     <br>
   {{/each}}
-  <a href="/">home</a>
 </template>
 
 <template name="errors">
@@ -61,6 +66,6 @@
 </template>
 
 <template name="links">
-  <a href="" id="chat">chat</a>
-  <a href="" id="showPost">posts</a>
+  <a href="/chat" id="chat">chat</a>
+  <a href="/post" id="showPost">posts</a>
 </template>

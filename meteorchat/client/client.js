@@ -83,8 +83,11 @@ Router.map(function() {
     template: 'layout',
     yieldTemplates: {'messages': {to: 'chat'}}
   })
-  this.route('posts', {
-    path: '/posts',
+  this.route('post', {
+    path: '/post',
+  })
+  this.route('chat', {
+    path: '/chat'
   })
 })
 
