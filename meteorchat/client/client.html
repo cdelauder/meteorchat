@@ -7,10 +7,14 @@
 
   {{>welcome}}
 
+  {{>links}}
+
   <div class="post">
-    {{>newPost}}
-    {{>errors}}
-    {{>posts}}
+    {{#if true}}
+      {{>newPost}}
+      {{>errors}}
+      {{>posts}}
+    {{/if}}
   </div>
   <div class="chat">
     {{>input}}
@@ -19,9 +23,13 @@
 </body>
 
 <template name="welcome">
-  <p>
-    Log In
-  </p>
+  {{#if currentUser}}
+    hi {{currentUser.profile.name}}
+  {{else}}
+    <p>
+      Log In
+    </p>
+  {{/if}}
 </template>
 
 <template name="messages">
@@ -50,4 +58,9 @@
 
 <template name="errors">
   <p>{{errors}}</p>
+</template>
+
+<template name="links">
+  <a href="" id="chat">chat</a>
+  <a href="" id="showPost">posts</a>
 </template>

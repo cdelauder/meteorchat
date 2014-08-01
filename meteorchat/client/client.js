@@ -1,3 +1,10 @@
+Template.links.events = {
+  'click links#chat': function(event) {
+    event.preventDefault()
+    Messages.remove('messages')
+  }
+}
+
 Template.messages.messages = function() {
   return Messages.find({}, {sort: {time:-1}})
 }
@@ -44,10 +51,11 @@ Template.newPost.events = {
             body: body,
             time: Date.now()
           })
+        } else {
+          Session.set('error', 'posts must have a title and body')
         }
       } else {
         Session.set('error', 'must be logged in to post')
-        console.log(Session.get('error'))
       }
 
       var title = ''
