@@ -4,14 +4,9 @@
 </head>
 <body>
 
-  {{>home}}
+<!--   {{>layout}} -->
   
 </body>
-
-
-<template name="home">
-  <p>hello</p>
-</template>
 
 <template name="layout">
   <html>
@@ -19,7 +14,7 @@
   </html>
   <body>
     <div>
-      {{>yield }}
+      {{> home }}
     </div>
   </body>
 </template>

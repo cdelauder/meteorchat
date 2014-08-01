@@ -1,13 +1,12 @@
-<!-- <head>
-  <title>Meteorchat</title>
-</head>
-<body>
+<template name="home">
   {{>loginButtons align="right"}}<br>
   <h1>Meteorchat</h1>
 
   {{>welcome}}
 
   {{>links}}
+
+  <a href="/posts">posts?</a>
 
   <div class="post">
     {{#if true}}
@@ -20,7 +19,7 @@
     {{>input}}
     {{>messages}}
   </div>
-</body> -->
+</template>
 
 <template name="welcome">
   {{#if currentUser}}
@@ -54,6 +53,7 @@
     {{body}}<br>
     <br>
   {{/each}}
+  <a href="/">home</a>
 </template>
 
 <template name="errors">
