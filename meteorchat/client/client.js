@@ -73,13 +73,15 @@ Template.errors.helpers({
 });
 
 Meteor.startup(function() {
-  layout = new Iron.Layout({ template: 'home'})
+  layout = new Iron.Layout({ template: 'layout'})
+  messages = new Iron.Layout({ template: 'messages'})
 })
 
 Router.map(function() {
-  this.route('layout', {
-    path: '/',
-    layoutTemplate: 'home'
-  })
+  this.route('layout', {path: '/', template: 'layout', yieldTemplates: 'messages'})
+  // this.route('layout', {
+  //   path: '/',
+  //   layoutTemplate: 'home'
+  // })
 })
 

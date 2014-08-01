@@ -4,14 +4,22 @@
 </head>
 <body>
 
-  {{> home}}
-
+  {{>home}}
+  
 </body>
 
 
-
 <template name="home">
-  <div>
-    {{> yield}}
-  </div>
+  <p>hello</p>
+</template>
+
+<template name="layout">
+  <html>
+    <head>meteorchat</head>
+  </html>
+  <body>
+    <div>
+      {{>yield }}
+    </div>
+  </body>
 </template>
