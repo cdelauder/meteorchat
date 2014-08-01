@@ -72,3 +72,14 @@ Template.errors.helpers({
   }
 });
 
+Meteor.startup(function() {
+  layout = new Iron.Layout({ template: 'home'})
+})
+
+Router.map(function() {
+  this.route('layout', {
+    path: '/',
+    layoutTemplate: 'home'
+  })
+})
+
