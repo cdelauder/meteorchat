@@ -3,12 +3,13 @@
   <h1>Meteorchat</h1>
 
   {{>welcome}}
-
+  <br>
   {{>links}}
 
 </template>
 
 <template name="chat">
+  <a href="{{ pathFor 'test'}}">testlink</a>
   <div class="chat">
     {{>input}}
     {{>messages}}

@@ -89,5 +89,8 @@ Router.map(function() {
   this.route('chat', {
     path: '/chat'
   })
+  this.route('test', {
+    path: '/test'
+  })
 })
 
