@@ -49,17 +49,21 @@
 </template>
 
 <template name="newPost">
+  <div class="form-group">
   <p>post title:<input type="text" id="title"></p>
   <p>post body:<input type="text" id="body"></p>
+  </div>
 </template>
 
 <template name="posts">
+  <div class='col-lg-6'>
   <a href="/">home</a>
   {{#each posts}}
-    {{title}}: <br>
-    {{body}}<br>
+    <p class="bg-primary">{{title}}:</p> <br>
+    <p class="bg-info">{{body}}</p><br>
     <br>
   {{/each}}
+  </div>
 </template>
 
 <template name="errors">
